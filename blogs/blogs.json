@@ -1,0 +1,92 @@
+{
+  "aid": "chargepoint",
+  "url": "https://www.chargepoint.com/engineering/",
+  "created": "2026-06-13",
+  "modified": "2026-06-13",
+  "blogs": [
+    {
+      "title": "Working toward an accessible ChargePoint driver portal",
+      "url": "https://www.chargepoint.com/engineering/working-toward-accessible-chargepoint-driver-portal",
+      "date": "2023-07-26",
+      "author": "Cloud Software Team"
+    },
+    {
+      "title": "Keeping accessibility [a11y] top of mind at ChargePoint",
+      "url": "https://www.chargepoint.com/engineering/keeping-accessibility-a11y-top-mind-chargepoint",
+      "date": "2021-11-18",
+      "author": "ChargePoint Engineering"
+    },
+    {
+      "title": "Scaling ChargePoint web application development with cp-toolkit",
+      "url": "https://www.chargepoint.com/engineering/scaling-chargepoint-web-application-development-cp-toolkit",
+      "date": "2021-09-21",
+      "author": "ChargePoint Engineering"
+    },
+    {
+      "title": "xcparse",
+      "url": "https://www.chargepoint.com/engineering/xcparse",
+      "date": "2019-10-03",
+      "author": "Mobile Engineering Team"
+    },
+    {
+      "title": "Moving Mountains with Power Management",
+      "url": "https://www.chargepoint.com/engineering/moving-mountains-power-management",
+      "date": "2019-10-03",
+      "author": "Solutions Engineering Team"
+    },
+    {
+      "title": "A Peek Inside ChargePoint's Advanced Test Facility",
+      "url": "https://www.chargepoint.com/engineering/peek-inside-chargepoints-advanced-test-facility",
+      "date": "2019-10-03",
+      "author": "Reliability Engineering Team"
+    },
+    {
+      "title": "How We Toughened Up Touchscreens with Machine Learning",
+      "url": "https://www.chargepoint.com/engineering/how-we-toughened-touchscreens-machine-learning",
+      "date": "2019-06-10",
+      "author": "Embedded Software Team"
+    },
+    {
+      "title": "Roller Coasting to New Heights",
+      "url": "https://www.chargepoint.com/engineering/roller-coasting-new-heights",
+      "date": "2019-06-07",
+      "author": "ChargePoint Engineering"
+    },
+    {
+      "title": "How We Streamlined Global Charging with Inter-Cloud Communication",
+      "url": "https://www.chargepoint.com/engineering/how-we-streamlined-global-charging-inter-cloud-communication",
+      "date": "2019-06-02",
+      "author": "Cloud Software Team"
+    },
+    {
+      "title": "ChargePoint Takes Maker Faire",
+      "url": "https://www.chargepoint.com/engineering/chargepoint-takes-maker-faire",
+      "date": "2019-05-20",
+      "author": "ChargePoint Engineering"
+    },
+    {
+      "title": "At ChargePoint, Prepare to Be Inspired Every Day",
+      "url": "https://www.chargepoint.com/engineering/chargepoint-prepare-be-inspired-every-day",
+      "date": "2019-02-07",
+      "author": "ChargePoint Engineering"
+    },
+    {
+      "title": "ChargePoint Engineers: The People Inventing E-Mobility",
+      "url": "https://www.chargepoint.com/engineering/chargepoint-engineers-people-inventing-e-mobility",
+      "date": "2018-12-05",
+      "author": "ChargePoint Engineering"
+    },
+    {
+      "title": "ChargePoint Software Developers Fuel an EV Future",
+      "url": "https://www.chargepoint.com/engineering/chargepoint-software-developers-fuel-ev-future",
+      "date": "2018-11-27",
+      "author": "ChargePoint Engineering"
+    },
+    {
+      "title": "ChargePoint Hackathon: Full Speed Ahead",
+      "url": "https://www.chargepoint.com/engineering/chargepoint-hackathon-full-speed-ahead",
+      "date": "2018-05-11",
+      "author": "ChargePoint Engineering"
+    }
+  ]
+}

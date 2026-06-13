@@ -1,0 +1,82 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.chargepoint.com",
+  "name": "ChargePoint",
+  "url": "https://www.chargepoint.com",
+  "logo": "https://www.chargepoint.com/themes/chargepoint/images/chargepoint-logo.svg",
+  "description": "ChargePoint operates one of the world's largest EV charging networks, providing a Web Services API for finding stations, checking real-time availability, managing load, initiating and monitoring charging sessions, and accessing usage data for fleet and home charging deployments.",
+  "sameAs": [
+    "https://www.linkedin.com/company/chargepoint",
+    "https://x.com/chargepoint",
+    "https://github.com/ChargePoint"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "devsupport@chargepoint.com",
+    "contactType": "Developer Support"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "ChargePoint API Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "ChargePoint Stations API",
+        "description": "Retrieve detailed information about ChargePoint charging stations, including location, address, GPS coordinates, power specifications, port counts, pricing, and station model details.",
+        "url": "https://docs.chargepoint.com"
+      },
+      {
+        "@type": "Offer",
+        "name": "ChargePoint Station Status API",
+        "description": "Query real-time status of ChargePoint charging station ports. Returns port availability states including AVAILABLE, INUSE, UNREACHABLE, and UNKNOWN with timestamps.",
+        "url": "https://docs.chargepoint.com"
+      },
+      {
+        "@type": "Offer",
+        "name": "ChargePoint Load Management API",
+        "description": "Monitor and control power load at ChargePoint charging stations. Retrieve current load in kilowatts and issue load shedding commands.",
+        "url": "https://docs.chargepoint.com"
+      },
+      {
+        "@type": "Offer",
+        "name": "ChargePoint Charging Sessions API",
+        "description": "Access charging session data for ChargePoint stations, including energy consumed (kWh), session start and end timestamps, and driver information.",
+        "url": "https://docs.chargepoint.com"
+      },
+      {
+        "@type": "Offer",
+        "name": "ChargePoint Alarms API",
+        "description": "Retrieve and manage alarms from ChargePoint charging stations. Returns alarm type, alarm timestamp, and station identifier.",
+        "url": "https://docs.chargepoint.com"
+      },
+      {
+        "@type": "Offer",
+        "name": "ChargePoint Station Groups API",
+        "description": "Manage and query ChargePoint station groups that organize charging infrastructure by location, fleet, or organizational unit.",
+        "url": "https://docs.chargepoint.com"
+      },
+      {
+        "@type": "Offer",
+        "name": "ChargePoint Fleet Management API",
+        "description": "Manage electric vehicle fleet charging through ChargePoint's platform. Access vehicle registration, driver assignment, charging schedules, and fleet-level usage reporting.",
+        "url": "https://www.chargepoint.com/businesses/fleet"
+      }
+    ]
+  },
+  "termsOfService": "https://na.chargepoint.com/terms_web",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://docs.chargepoint.com",
+    "name": "ChargePoint Developer Documentation"
+  },
+  "subjectOf": [
+    {
+      "@type": "TechArticle",
+      "name": "ChargePoint Web Services API v5.1",
+      "description": "SOAP/WSDL Web Services API using WS-Security authentication for EV charging station management.",
+      "url": "https://webservices.chargepoint.com/cp_api_5.1.wsdl",
+      "encodingFormat": "application/wsdl+xml"
+    }
+  ]
+}
