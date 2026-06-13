@@ -1,0 +1,209 @@
+aid: chargepoint
+url: https://raw.githubusercontent.com/api-evangelist/chargepoint/main/apis.yml
+apis:
+  - aid: chargepoint:chargepoint-stations-api
+    name: ChargePoint Stations API
+    tags:
+      - Stations
+      - EV Charging
+      - Locations
+    properties:
+      - url: https://docs.chargepoint.com
+        type: Documentation
+      - url: https://webservices.chargepoint.com/cp_api_5.1.wsdl
+        type: WSDL
+    description: >-
+      Retrieve detailed information about ChargePoint charging stations, including location, address,
+      GPS coordinates, power specifications, port counts, pricing, and station model details.
+      Supports filtering by location, station group, and organization.
+
+  - aid: chargepoint:chargepoint-station-status-api
+    name: ChargePoint Station Status API
+    tags:
+      - Stations
+      - Status
+      - Availability
+      - EV Charging
+    properties:
+      - url: https://docs.chargepoint.com
+        type: Documentation
+      - url: https://webservices.chargepoint.com/cp_api_5.1.wsdl
+        type: WSDL
+    description: >-
+      Query real-time status of ChargePoint charging station ports. Returns port availability states
+      including AVAILABLE, INUSE, UNREACHABLE, and UNKNOWN with timestamps, enabling applications
+      to display live station availability to EV drivers.
+
+  - aid: chargepoint:chargepoint-load-management-api
+    name: ChargePoint Load Management API
+    tags:
+      - Load Management
+      - Energy
+      - Power Management
+      - EV Charging
+    properties:
+      - url: https://docs.chargepoint.com
+        type: Documentation
+      - url: https://webservices.chargepoint.com/cp_api_5.1.wsdl
+        type: WSDL
+    description: >-
+      Monitor and control power load at ChargePoint charging stations. Retrieve current load in
+      kilowatts, issue load shedding commands to limit station power by percentage or maximum load
+      for a specified time period, and clear shed states to resume normal charging operations.
+
+  - aid: chargepoint:chargepoint-charging-sessions-api
+    name: ChargePoint Charging Sessions API
+    tags:
+      - Sessions
+      - Charging
+      - Energy
+      - Usage Data
+    properties:
+      - url: https://docs.chargepoint.com
+        type: Documentation
+      - url: https://webservices.chargepoint.com/cp_api_5.1.wsdl
+        type: WSDL
+    description: >-
+      Access charging session data for ChargePoint stations, including energy consumed (kWh),
+      session start and end timestamps, session identifiers, and driver information. Supports
+      fleet and home charging usage reporting and reconciliation workflows.
+
+  - aid: chargepoint:chargepoint-alarms-api
+    name: ChargePoint Alarms API
+    tags:
+      - Alarms
+      - Monitoring
+      - Alerts
+      - EV Charging
+    properties:
+      - url: https://docs.chargepoint.com
+        type: Documentation
+      - url: https://webservices.chargepoint.com/cp_api_5.1.wsdl
+        type: WSDL
+    description: >-
+      Retrieve and manage alarms from ChargePoint charging stations. Returns alarm type, alarm
+      timestamp, and station identifier for the most recent alarm condition. Supports clearing
+      all active alarms on a station to restore normal monitoring state.
+
+  - aid: chargepoint:chargepoint-station-groups-api
+    name: ChargePoint Station Groups API
+    tags:
+      - Station Groups
+      - Organization
+      - Fleet
+      - EV Charging
+    properties:
+      - url: https://docs.chargepoint.com
+        type: Documentation
+      - url: https://webservices.chargepoint.com/cp_api_5.1.wsdl
+        type: WSDL
+    description: >-
+      Manage and query ChargePoint station groups that organize charging infrastructure by location,
+      fleet, or organizational unit. Retrieve group hierarchies, station rights profiles, and
+      CPN (ChargePoint Network) instance configurations for enterprise and fleet deployments.
+
+  - aid: chargepoint:chargepoint-fleet-management-api
+    name: ChargePoint Fleet Management API
+    tags:
+      - Fleet
+      - Vehicles
+      - Management
+      - EV Charging
+    properties:
+      - url: https://docs.chargepoint.com
+        type: Documentation
+      - url: https://www.chargepoint.com/businesses/fleet
+        type: Documentation
+    description: >-
+      Manage electric vehicle fleet charging through ChargePoint's platform. Access vehicle
+      registration, driver assignment, charging schedules, and fleet-level usage reporting.
+      Integrates with fleet telematics and fuel card systems for unified fleet operations.
+
+name: ChargePoint
+tags:
+  - EV Charging
+  - Electric Vehicles
+  - Fleet Management
+  - Energy Management
+  - Transportation
+kind: contract
+access: 3rd-Party
+common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/chargepoint
+  - url: https://www.chargepoint.com
+    type: Website
+  - url: https://na.chargepoint.com/terms_web
+    type: TermsOfService
+  - url: https://www.chargepoint.com/download-file/chargepoint-api-services-terms-and-conditions-na
+    type: TermsOfService
+  - url: https://docs.chargepoint.com
+    type: Documentation
+  - url: https://webservices.chargepoint.com/cp_api_5.1.wsdl
+    type: WSDL
+  - url: https://docs.chargepoint.com/ref-docs-sec/content/pdfs/4-software/api/cp_api5.1.pdf
+    type: APIReference
+  - url: https://na.chargepoint.com/UI/s3docs/docs/help/SetupWebServicesAPI.pdf
+    type: GettingStarted
+  - url: https://chargepoint-fleet-telematics.statuspage.io/
+    type: StatusPage
+  - url: https://www.chargepoint.com/blog
+    type: Blog
+  - url: https://www.chargepoint.com/engineering/
+    type: Blog
+  - url: https://www.chargepoint.com/businesses/software
+    type: Documentation
+  - url: https://partner.chargepoint.com
+    type: Portal
+  - url: https://github.com/ChargePoint
+    type: GitHubOrganization
+  - url: https://github.com/mbillow/python-chargepoint
+    type: Python SDK
+  - url: https://x.com/chargepoint
+    type: X (Twitter)
+  - type: Authentication
+    url: https://docs.chargepoint.com
+    data:
+      - type: WS-Security UsernameToken
+        description: >-
+          The ChargePoint Web Services API uses WS-Security to authenticate requests.
+          An API license key (username) and password are included in the SOAP Header of
+          every message. Contact devsupport@chargepoint.com to obtain API credentials.
+  - type: Support
+    url: mailto:devsupport@chargepoint.com
+  - type: Features
+    data:
+      - SOAP/WSDL Web Services API v5.1 with WS-Security authentication
+      - Real-time station availability and status monitoring
+      - Load management and demand response (shed/clear load commands)
+      - Charging session data with energy usage and timestamps
+      - Station alarm monitoring and management
+      - Fleet management with vehicle and driver assignment
+      - Station group hierarchy for enterprise deployments
+      - Open Charge Point Protocol (OCPP) hardware compatibility
+      - 40+ turnkey integrations including building and energy management systems
+      - Fleet telematics integration and fuel card system connectivity
+      - Dynamic pricing controls by driver type, session length, and time-of-use
+      - 385,000+ activated ports across the ChargePoint network
+    sources:
+      - https://www.chargepoint.com/businesses/software
+      - https://docs.chargepoint.com
+    updated: '2026-06-13'
+created: '2026-06-13'
+modified: '2026-06-13'
+position: Consuming
+description: >-
+  ChargePoint operates one of the world's largest EV charging networks, providing a Web Services
+  API for finding stations, checking real-time availability, managing load, initiating and
+  monitoring charging sessions, and accessing usage data for fleet and home charging deployments.
+  The platform supports enterprise fleet electrification through open APIs and 40+ integrations.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+  - FN: APIs.json
+    email: info@apis.io
+  - name: ChargePoint
+    email: devsupport@chargepoint.com
+    url: https://www.chargepoint.com
+specificationVersion: '0.19'
+image: https://www.chargepoint.com/themes/chargepoint/images/chargepoint-logo.svg

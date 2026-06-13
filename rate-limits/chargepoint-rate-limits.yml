@@ -1,0 +1,57 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: ChargePoint
+providerId: chargepoint
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Rate Limiting
+  - EV Charging
+  - SOAP API
+description: >-
+  ChargePoint Web Services API (SOAP v5.1) rate limits are not publicly published.
+  The API is accessed via WS-Security authenticated SOAP calls to the ChargePoint
+  web services endpoint. Rate limits and throttling policies are enforced per
+  licensed account and are subject to the API Services Terms and Conditions.
+  Contact devsupport@chargepoint.com for current limits applicable to your deployment.
+sources:
+  - https://docs.chargepoint.com/ref-docs-sec/content/pdfs/4-software/api/cp_api5.1.pdf
+  - https://www.chargepoint.com/download-file/chargepoint-api-services-terms-and-conditions-na
+  - https://volttron.readthedocs.io/en/releases-8.x/driver-framework/chargepoint/chargepoint-specification.html
+endpoint:
+  protocol: SOAP
+  wsdl: https://webservices.chargepoint.com/cp_api_5.1.wsdl
+authentication:
+  type: WS-Security UsernameToken
+  description: >-
+    API license key and password are submitted in the SOAP Header using WS-Security
+    UsernameToken. Credentials are provisioned per organization through the ChargePoint
+    admin portal by creating an API User role account.
+limits:
+  - name: API requests
+    scope: account
+    metric: requests
+    limit: not-published
+    timeFrame: unknown
+    notes: >-
+      ChargePoint does not publicly disclose specific rate limit values. Limits are
+      enforced contractually per licensed account. Real-time monitoring use cases
+      should implement polling intervals appropriate to operational needs (e.g.,
+      getStationStatus polled no more frequently than every 30–60 seconds per station).
+policies:
+  - name: Per-account licensing
+    description: >-
+      API access requires a valid license key provisioned by ChargePoint. Unauthorized
+      or unlicensed requests are rejected at the SOAP authentication layer.
+  - name: Polling best practices
+    description: >-
+      For real-time station monitoring, avoid polling individual station status more
+      frequently than operationally necessary. Use station group queries where possible
+      to batch data retrieval and reduce request volume.
+  - name: Error handling
+    description: >-
+      SOAP faults are returned for authentication failures, invalid station IDs, and
+      malformed requests. Implement exponential backoff and retry logic for transient
+      failures.

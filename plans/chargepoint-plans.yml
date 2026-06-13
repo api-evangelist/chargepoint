@@ -1,0 +1,88 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: ChargePoint
+providerId: chargepoint
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - EV Charging
+  - Fleet Management
+  - Energy Management
+description: >-
+  ChargePoint API access is bundled with cloud subscription plans rather than sold
+  separately as a standalone API product. Pricing is per-port per-year and varies by
+  plan tier (Commercial, Fleet, Multi-family) and port count. Custom enterprise and
+  API integration pricing is negotiated directly with ChargePoint sales. API support
+  services are available separately. Contact sales@chargepoint.com for current pricing.
+sources:
+  - https://www.chargepoint.com/businesses/software
+  - https://www.chargepoint.com/download-file/chargepoint-api-services-terms-and-conditions-na
+  - https://www.chargepoint.com/download-file/chargepoint-commercial-cloud-plan-ds-en-us
+plans:
+  - id: chargepoint-commercial-cloud
+    name: Commercial Cloud Plan
+    type: subscription
+    description: >-
+      Cloud management plan for workplace, retail, and public charging deployments.
+      Includes API access via Web Services for integration with building and energy
+      management systems. Pricing is approximately $600–$800 per port per year
+      depending on port count and negotiated terms.
+    entries:
+      - label: Cloud subscription (per port per year)
+        name: commercial_cloud_per_port
+        type: flat-rate
+        metric: port
+        limit: -1
+        timeFrame: year
+        unit: 1
+        price: '700.00'
+        priceApproximate: true
+        userMultiplied: true
+      - label: API support services
+        name: api_support
+        type: add-on
+        metric: engagement
+        limit: -1
+        timeFrame: contract
+        unit: 1
+        price: contact-sales
+        userMultiplied: false
+
+  - id: chargepoint-fleet-cloud
+    name: Fleet Cloud Plan
+    type: subscription
+    description: >-
+      Comprehensive fleet management plan for commercial fleets with EV charging
+      infrastructure. Includes fleet telematics integration, driver management,
+      usage reporting APIs, and open API access for third-party system integration.
+      Pricing negotiated based on fleet size and port count.
+    entries:
+      - label: Fleet cloud subscription (per port per year)
+        name: fleet_cloud_per_port
+        type: flat-rate
+        metric: port
+        limit: -1
+        timeFrame: year
+        unit: 1
+        price: contact-sales
+        userMultiplied: true
+
+  - id: chargepoint-multifamily-cloud
+    name: Multi-Family Cloud Plan
+    type: subscription
+    description: >-
+      Cloud plan designed for residential multi-unit dwelling charging deployments
+      including apartments and condominiums. Includes resident billing, reporting,
+      and API access for property management system integration.
+    entries:
+      - label: Multi-family cloud subscription (per port per year)
+        name: multifamily_cloud_per_port
+        type: flat-rate
+        metric: port
+        limit: -1
+        timeFrame: year
+        unit: 1
+        price: contact-sales
+        userMultiplied: true

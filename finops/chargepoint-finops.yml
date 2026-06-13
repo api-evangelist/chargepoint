@@ -1,0 +1,95 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: ChargePoint
+providerId: chargepoint
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - FinOps
+  - Cost Management
+  - FOCUS
+  - EV Charging
+  - Fleet Management
+description: >-
+  FOCUS-aligned FinOps for ChargePoint: per-port cloud subscription costs plus
+  energy consumption charges passed through to drivers or fleet operators. API
+  access costs are embedded in cloud plan subscription pricing.
+sources:
+  - https://www.chargepoint.com/businesses/software
+  - https://www.chargepoint.com/download-file/chargepoint-commercial-cloud-plan-ds-en-us
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: ChargePoint, Inc.
+serviceCategory: Transportation / Energy Infrastructure
+billingModel:
+  pricingCategory: Subscription + Usage Pass-Through
+  billingFrequency: Annual Subscription + Per-Session Energy
+  billingCurrency: USD
+  chargeCategories:
+    - Purchase
+    - Usage
+    - Adjustment
+    - Credit
+focusColumns:
+  ServiceName: ChargePoint
+  ServiceCategory: Transportation
+  ProviderName: ChargePoint
+  PublisherName: ChargePoint, Inc.
+  InvoiceIssuerName: ChargePoint, Inc.
+  BillingCurrency: USD
+meters:
+  - name: cloud_plan_ports
+    unit: port
+    aggregation: sum
+    dimensions:
+      - plan_type
+      - location
+      - organization
+  - name: charging_sessions
+    unit: session
+    aggregation: sum
+    dimensions:
+      - station_id
+      - driver_type
+      - location
+  - name: energy_delivered
+    unit: kWh
+    aggregation: sum
+    dimensions:
+      - station_id
+      - port_id
+      - driver_type
+      - time_of_use
+  - name: api_support_services
+    unit: engagement
+    aggregation: sum
+    dimensions:
+      - service_type
+principles:
+  - name: Visibility
+    description: >-
+      Use the ChargePoint Charging Sessions API (getChargingSessionData) to retrieve
+      session-level energy consumption and timestamps for cost allocation and
+      reconciliation across fleet, workplace, and home charging contexts.
+  - name: Allocation
+    description: >-
+      Tag station groups and drivers by cost center, department, or fleet vehicle
+      to enable chargeback and showback for energy costs. ChargePoint station groups
+      support organizational hierarchy for cost allocation.
+  - name: Optimization
+    description: >-
+      Leverage the Load Management API (shedLoad/clearShedState) to shift charging
+      to off-peak periods, reducing demand charges. Use dynamic pricing controls to
+      incentivize off-peak charging behavior and optimize energy costs.
+  - name: Accountability
+    description: >-
+      Reconcile monthly ChargePoint subscription invoices against active port counts.
+      Monitor energy delivery via session data APIs and compare against utility bills
+      for discrepancy detection. Review fleet telematics data for unauthorized or
+      inefficient charging patterns.
