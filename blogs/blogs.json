@@ -92,11 +92,11 @@
   "repo": "chargepoint",
   "feeds": [
     {
-      "source": "https://www.chargepoint.com/blog",
+      "source": "https://www.chargepoint.com/blog/rss/",
       "feed_url": "https://www.chargepoint.com/blog/rss/",
       "title": "",
       "saved": 2,
-      "method": "discovered"
+      "method": "feed"
     },
     {
       "source": "https://www.chargepoint.com/engineering/",
@@ -104,8 +104,15 @@
       "title": "",
       "saved": 0,
       "method": "none"
+    },
+    {
+      "source": "https://www.chargepoint.com/blog",
+      "feed_url": "https://www.chargepoint.com/blog/rss/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
     }
   ],
-  "post_count": 2,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 7,
+  "fetched": "2026-06-27T12:03:07Z"
 }
