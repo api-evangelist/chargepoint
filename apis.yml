@@ -129,6 +129,10 @@ tags:
 kind: contract
 access: 3rd-Party
 common:
+  - type: TrustCenter
+    url: security/chargepoint-trust-center.yml
+  - type: DomainSecurity
+    url: security/chargepoint-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/chargepoint
   - url: https://www.chargepoint.com
