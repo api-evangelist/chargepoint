@@ -193,6 +193,18 @@ common:
       - https://www.chargepoint.com/businesses/software
       - https://docs.chargepoint.com
     updated: '2026-06-13'
+accessModel:
+  pricing: paid
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Requires approval
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 created: '2026-06-13'
 modified: '2026-06-13'
 position: Consuming
