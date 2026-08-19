@@ -221,5 +221,5 @@ maintainers:
   - name: ChargePoint
     email: devsupport@chargepoint.com
     url: https://www.chargepoint.com
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 image: https://www.chargepoint.com/themes/chargepoint/images/chargepoint-logo.svg
