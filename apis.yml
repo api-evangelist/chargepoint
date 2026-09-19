@@ -6,6 +6,10 @@ apis:
     tags:
       - Stations
       - EV Charging
+      - Location
+    tags_raw:
+      - Stations
+      - EV Charging
       - Locations
     properties:
       - url: https://docs.chargepoint.com
