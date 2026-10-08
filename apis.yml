@@ -134,6 +134,12 @@ tags:
 kind: contract
 access: 3rd-Party
 common:
+  - type: Plans
+    url: plans/chargepoint-plans.yml
+  - type: RateLimits
+    url: rate-limits/chargepoint-rate-limits.yml
+  - type: FinOps
+    url: finops/chargepoint-finops.yml
   - type: TrustCenter
     url: security/chargepoint-trust-center.yml
   - type: DomainSecurity
