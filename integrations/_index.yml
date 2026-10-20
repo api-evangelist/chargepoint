@@ -41,3 +41,67 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: chargepoint-open-charge-alliance-ocpp-certification
+  label: Open Charge Alliance (OCPP certification)
+  partner_name: Open Charge Alliance (OCPP certification)
+  category: OCPP certified charging products
+  type: register
+  channel: standard-directory
+  evidence: https://openchargealliance.org/participants/chargepoint-inc/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Open Charge Alliance certified products (openchargealliance.org/certified-companies/)
+    standard: OCPP (Open Charge Point Protocol)
+    spec_file: null
+    role: ocpp-certified-vendor
+    registered_name: ChargePoint Inc
+    register_id: OCA.0201.0125.CS
+    register_country: USA
+    matched_domain: chargepoint.com
+    matched_by: domain
+    certified_products:
+    - product: OCPP certified Charging Station
+      product_type: Charging Station
+      ocpp_versions:
+      - OCPP 2.0.1
+      lapsed: false
+    certificates_active: 6
+    signal_note: certified_products = one entry per OCPP product type, never per certificate, model or version;
+      lapsed only when every certificate of the product type is on the OCA withdrawn list (the register does not
+      lapse a certificate when its OCPP version is superseded). Certificate counts are context, never counted
+    detected_by: sweep-ev-charging.py
+    detected: '2026-10-20'
+    identity: wikidata Q5176149 'ChargePoint' P856 https://chargepoint.com
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+    other_registrations:
+    - ChargePoint, Inc.
+  status: not-a-workflow
+  arazzo: null
+- slug: chargepoint-charin-e-v-charging-interface-initiative
+  label: CharIN e.V. (Charging Interface Initiative)
+  partner_name: CharIN e.V. (Charging Interface Initiative)
+  category: charging-interface standards association membership
+  type: register
+  channel: standard-directory
+  evidence: https://www.charin.global/community/chargepoint-inc
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: CharIN e.V. members (charin.global/community, membership:core + membership:regular)
+    standard: CCS / MCS / ISO 15118 (Plug & Charge)
+    spec_file: null
+    role: charin-member
+    registered_name: ChargePoint, Inc.
+    register_id: https://www.charin.global/community/chargepoint-inc
+    partner_tier: core
+    member_since: null
+    matched_domain: chargepoint.com
+    matched_by: domain
+    signal_note: 'participation only: association membership; tier is context, never counted'
+    detected_by: sweep-ev-charging.py
+    detected: '2026-10-20'
+    identity: wikidata Q5176149 'ChargePoint' P856 https://chargepoint.com
+    identity_source: wikidata P856 (member page gives no website; labelled provenance step)
+  status: not-a-workflow
+  arazzo: null
