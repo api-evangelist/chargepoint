@@ -94,6 +94,11 @@ apis:
     tags:
       - Station Groups
       - Organization
+      - Fleet Management
+      - EV Charging
+    tags_raw:
+      - Station Groups
+      - Organization
       - Fleet
       - EV Charging
     properties:
@@ -109,6 +114,11 @@ apis:
   - aid: chargepoint:chargepoint-fleet-management-api
     name: ChargePoint Fleet Management API
     tags:
+      - Fleet Management
+      - Vehicles
+      - Management
+      - EV Charging
+    tags_raw:
       - Fleet
       - Vehicles
       - Management
