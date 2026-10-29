@@ -1,4 +1,4 @@
-# ChargePoint (chargepoint)
+# ChargePoint
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,166 +66,113 @@
 
 ChargePoint operates one of the world's largest EV charging networks, providing a Web Services API for finding stations, checking real-time availability, managing load, initiating and monitoring charging sessions, and accessing usage data for fleet and home charging deployments. The platform supports enterprise fleet electrification through open APIs and 40+ integrations.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/chargepoint/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/chargepoint/main/apis.yml)
+**Areas:** EV Charging · Electric Vehicles · Fleet Management · Energy Management · Transportation · Mobility
 
-## Scope
+## ChargePoint on APIs.io
 
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for ChargePoint is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/chargepoint/](https://apis.io/providers/chargepoint/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- EV Charging
-- Electric Vehicles
-- Fleet Management
-- Energy Management
-- Transportation
+- [ChargePoint Stations API](https://apis.io/apis/chargepoint/chargepoint-stations-api/) — Retrieve detailed information about ChargePoint charging stations, including location, address, GPS coordinates, power specifications, port counts, pricing,…
+- [ChargePoint Station Status API](https://apis.io/apis/chargepoint/chargepoint-station-status-api/) — Query real-time status of ChargePoint charging station ports. Returns port availability states including AVAILABLE, INUSE, UNREACHABLE, and UNKNOWN with…
+- [ChargePoint Load Management API](https://apis.io/apis/chargepoint/chargepoint-load-management-api/) — Monitor and control power load at ChargePoint charging stations. Retrieve current load in kilowatts, issue load shedding commands to limit station power by…
+- [ChargePoint Charging Sessions API](https://apis.io/apis/chargepoint/chargepoint-charging-sessions-api/) — Access charging session data for ChargePoint stations, including energy consumed (kWh), session start and end timestamps, session identifiers, and driver…
+- [ChargePoint Alarms API](https://apis.io/apis/chargepoint/chargepoint-alarms-api/) — Retrieve and manage alarms from ChargePoint charging stations. Returns alarm type, alarm timestamp, and station identifier for the most recent alarm…
+- [ChargePoint Station Groups API](https://apis.io/apis/chargepoint/chargepoint-station-groups-api/) — Manage and query ChargePoint station groups that organize charging infrastructure by location, fleet, or organizational unit. Retrieve group hierarchies,…
+- [ChargePoint Fleet Management API](https://apis.io/apis/chargepoint/chargepoint-fleet-management-api/) — Manage electric vehicle fleet charging through ChargePoint's platform. Access vehicle registration, driver assignment, charging schedules, and fleet-level…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-06-13
-- **Modified:** 2026-06-13
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (2)
 
-### ChargePoint Stations API
+Authentication, trust centre, and vulnerability disclosure.
 
-Retrieve detailed information about ChargePoint charging stations, including location, address, GPS coordinates, power specifications, port counts, pricing, and station model details. Supports filtering by location, station group, and organization.
+- [Chargepoint Domain Security](https://apis.io/security/chargepoint/chargepoint-domain-security/)
+- [Chargepoint Trust Center](https://apis.io/security/chargepoint/chargepoint-trust-center/)
 
-#### Tags
+#### Plans and pricing (1)
 
-- Stations
-- EV Charging
-- Locations
+Published plans, tiers and prices.
 
-#### Properties
+- [Chargepoint Plans](https://apis.io/plans/chargepoint/chargepoint-plans/)
 
-- [Documentation](https://docs.chargepoint.com)
-- [W S D L](https://webservices.chargepoint.com/cp_api_5.1.wsdl)
+#### Rate limits (1)
 
-### ChargePoint Station Status API
+Published request limits.
 
-Query real-time status of ChargePoint charging station ports. Returns port availability states including AVAILABLE, INUSE, UNREACHABLE, and UNKNOWN with timestamps, enabling applications to display live station availability to EV drivers.
+- [Chargepoint Rate Limits](https://apis.io/rate-limits/chargepoint/chargepoint-rate-limits/)
 
-#### Tags
+#### FinOps (1)
 
-- Stations
-- Status
-- Availability
-- EV Charging
+What the API costs to run, by operation.
 
-#### Properties
+- [Chargepoint Finops](https://apis.io/finops/chargepoint/chargepoint-finops/)
 
-- [Documentation](https://docs.chargepoint.com)
-- [W S D L](https://webservices.chargepoint.com/cp_api_5.1.wsdl)
+## Where to find this API
 
-### ChargePoint Load Management API
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-Monitor and control power load at ChargePoint charging stations. Retrieve current load in kilowatts, issue load shedding commands to limit station power by percentage or maximum load for a specified time period, and clear shed states to resume normal charging operations.
-
-#### Tags
-
-- Load Management
-- Energy
-- Power Management
-- EV Charging
-
-#### Properties
-
-- [Documentation](https://docs.chargepoint.com)
-- [W S D L](https://webservices.chargepoint.com/cp_api_5.1.wsdl)
-
-### ChargePoint Charging Sessions API
-
-Access charging session data for ChargePoint stations, including energy consumed (kWh), session start and end timestamps, session identifiers, and driver information. Supports fleet and home charging usage reporting and reconciliation workflows.
-
-#### Tags
-
-- Sessions
-- Charging
-- Energy
-- Usage Data
-
-#### Properties
-
-- [Documentation](https://docs.chargepoint.com)
-- [W S D L](https://webservices.chargepoint.com/cp_api_5.1.wsdl)
-
-### ChargePoint Alarms API
-
-Retrieve and manage alarms from ChargePoint charging stations. Returns alarm type, alarm timestamp, and station identifier for the most recent alarm condition. Supports clearing all active alarms on a station to restore normal monitoring state.
-
-#### Tags
-
-- Alarms
-- Monitoring
-- Alerts
-- EV Charging
-
-#### Properties
-
-- [Documentation](https://docs.chargepoint.com)
-- [W S D L](https://webservices.chargepoint.com/cp_api_5.1.wsdl)
-
-### ChargePoint Station Groups API
-
-Manage and query ChargePoint station groups that organize charging infrastructure by location, fleet, or organizational unit. Retrieve group hierarchies, station rights profiles, and CPN (ChargePoint Network) instance configurations for enterprise and fleet deployments.
-
-#### Tags
-
-- Station Groups
-- Organization
-- Fleet
-- EV Charging
-
-#### Properties
-
-- [Documentation](https://docs.chargepoint.com)
-- [W S D L](https://webservices.chargepoint.com/cp_api_5.1.wsdl)
-
-### ChargePoint Fleet Management API
-
-Manage electric vehicle fleet charging through ChargePoint's platform. Access vehicle registration, driver assignment, charging schedules, and fleet-level usage reporting. Integrates with fleet telematics and fuel card systems for unified fleet operations.
-
-#### Tags
-
-- Fleet
-- Vehicles
-- Management
-- EV Charging
-
-#### Properties
-
-- [Documentation](https://docs.chargepoint.com)
-- [Documentation](https://www.chargepoint.com/businesses/fleet)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/chargepoint)
 - [Website](https://www.chargepoint.com)
-- [Terms of Service](https://na.chargepoint.com/terms_web)
-- [Terms of Service](https://www.chargepoint.com/download-file/chargepoint-api-services-terms-and-conditions-na)
 - [Documentation](https://docs.chargepoint.com)
-- [W S D L](https://webservices.chargepoint.com/cp_api_5.1.wsdl)
-- [API Reference](https://docs.chargepoint.com/ref-docs-sec/content/pdfs/4-software/api/cp_api5.1.pdf)
-- [Getting Started](https://na.chargepoint.com/UI/s3docs/docs/help/SetupWebServicesAPI.pdf)
-- [Status Page](https://chargepoint-fleet-telematics.statuspage.io/)
+- [Getting started](https://na.chargepoint.com/UI/s3docs/docs/help/SetupWebServicesAPI.pdf)
+- [API reference](https://docs.chargepoint.com/ref-docs-sec/content/pdfs/4-software/api/cp_api5.1.pdf)
 - [Blog](https://www.chargepoint.com/blog)
-- [Blog](https://www.chargepoint.com/engineering/)
-- [Documentation](https://www.chargepoint.com/businesses/software)
-- [Portal](https://partner.chargepoint.com)
-- [GitHub Organization](https://github.com/ChargePoint)
-- [Python  S D K](https://github.com/mbillow/python-chargepoint)
-- [X ( Twitter)](https://x.com/chargepoint)
-- [Authentication](https://docs.chargepoint.com)
-- [Support](mailto:devsupport@chargepoint.com)
-- [Features](undefined)
+- [Terms of service](https://na.chargepoint.com/terms_web)
+- [GitHub](https://github.com/ChargePoint)
+- [Status](https://chargepoint-fleet-telematics.statuspage.io/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**FN:** APIs.json
-**Email:** info@apis.io
-**Email:** devsupport@chargepoint.com
-**URL:** https://www.chargepoint.com
+**Kin Score 27.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 53.6 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 26.3 |
+
+**Agent readiness 3.1** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.2** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/chargepoint/](https://apis.io/providers/chargepoint/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ChargePoint: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/chargepoint/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
